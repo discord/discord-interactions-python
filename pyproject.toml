@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "discord-interactions"
+version = "0.1.0"
+description = ""
+authors = ["Ian Webster <ian.webster@discordapp.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6.0"
+PyNaCl = "^1.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
