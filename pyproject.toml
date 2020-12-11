@@ -1,8 +1,13 @@
 [tool.poetry]
 name = "discord-interactions"
 version = "0.1.0"
-description = ""
-authors = ["Ian Webster <ian.webster@discordapp.com>"]
+description = "Useful tools for using the Discord Interactions API"
+authors = ["Ian Webster <ianw_pypi@ianww.com>"]
+maintainers = ["Ian Webster <ianw_pypi@ianww.com>"]
+keywords = ["discord"]
+readme = "README.md"
+repository = "https://github.com/discord/discord-interactions-python"
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.6.0"

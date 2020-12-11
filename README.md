@@ -1,9 +1,13 @@
 discord-interactions-python
 ---
+![PyPI - License](https://img.shields.io/pypi/l/discord-interactions)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/discord-interactions)
 
 Types and helper functions for Discord Interactions webhooks.
 
 # Installation
+
+Available via [pypi](https://pypi.org/project/discord-interactions/):
 
 ```
 pip install discord-interactions
