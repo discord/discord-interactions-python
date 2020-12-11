@@ -17,9 +17,16 @@ pip install discord-interactions
 
 Use the `InteractionType` and `InteractionResponseType` enums to process and respond to webhooks.
 
-Use `verify_key` to check a request signature.
+Use `verify_key` to check a request signature:
 
-Use `verify_key_decorator` to protect routes in a Flask app.
+```py
+if verify_key(request.data, signature, timestamp, 'my_client_public_key'):
+    print('Signature is valid')
+else:
+    print('Signature is invalid')
+```
+
+Use `verify_key_decorator` to protect routes in a Flask app:
 
 ```py
 import os
