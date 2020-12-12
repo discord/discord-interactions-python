@@ -42,7 +42,7 @@ def verify_key_decorator(client_public_key):
             signature = request.headers.get('X-Signature-Ed25519')
             timestamp = request.headers.get('X-Signature-Timestamp')
             if not verify_key(request.data, signature, timestamp, client_public_key):
-                return 'Bad request signature', 403
+                return 'Bad request signature', 401
 
             # Automatically respond to pings
             if request.json and request.json['type'] == InteractionType.PING:
