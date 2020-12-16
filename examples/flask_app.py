@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, jsonify
 
-from discord_interactions import verify_key_decorator, InteractionType
+from discord_interactions import verify_key_decorator, InteractionType, InteractionResponseType
 
 CLIENT_PUBLIC_KEY = os.getenv('CLIENT_PUBLIC_KEY')
 
