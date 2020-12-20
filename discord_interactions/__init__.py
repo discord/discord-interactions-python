@@ -28,7 +28,6 @@ def verify_key(raw_body: str, signature: str, timestamp: str, client_public_key:
         return True
     except Exception as ex:
         print(ex)
-        pass
     return False
 
 def verify_key_decorator(client_public_key):
