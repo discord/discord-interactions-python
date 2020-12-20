@@ -40,7 +40,7 @@ def verify_key_decorator(client_public_key):
             # Verify request
             signature = request.headers.get('X-Signature-Ed25519')
             timestamp = request.headers.get('X-Signature-Timestamp')
-            if not verify_key(request.data, signature, timestamp, client_public_key):
+            if signature is None or timestamp is None or not verify_key(request.data, signature, timestamp, client_public_key):
                 return 'Bad request signature', 401
 
             # Automatically respond to pings
