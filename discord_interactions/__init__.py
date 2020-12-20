@@ -44,7 +44,7 @@ def verify_key_decorator(client_public_key):
                 return 'Bad request signature', 401
 
             # Automatically respond to pings
-            if request.json and request.json['type'] == InteractionType.PING:
+            if request.json and request.json.get('type') == InteractionType.PING:
                 return jsonify({
                     'type': InteractionResponseType.PONG
                 })
