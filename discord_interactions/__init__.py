@@ -28,7 +28,6 @@ def verify_key(raw_body: str, signature: str, timestamp: str, client_public_key:
         return True
     except Exception as ex:
         print(ex)
-        pass
     return False
 
 def verify_key_decorator(client_public_key):
@@ -41,11 +40,11 @@ def verify_key_decorator(client_public_key):
             # Verify request
             signature = request.headers.get('X-Signature-Ed25519')
             timestamp = request.headers.get('X-Signature-Timestamp')
-            if not verify_key(request.data, signature, timestamp, client_public_key):
+            if signature is None or timestamp is None or not verify_key(request.data, signature, timestamp, client_public_key):
                 return 'Bad request signature', 401
 
             # Automatically respond to pings
-            if request.json and request.json['type'] == InteractionType.PING:
+            if request.json and request.json.get('type') == InteractionType.PING:
                 return jsonify({
                     'type': InteractionResponseType.PONG
                 })
