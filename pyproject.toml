@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "discord-interactions"
-version = "0.1.1"
+version = "0.1.2"
 description = "Useful tools for using the Discord Interactions API"
 authors = ["Ian Webster <ianw_pypi@ianww.com>"]
 maintainers = ["Ian Webster <ianw_pypi@ianww.com>"]
