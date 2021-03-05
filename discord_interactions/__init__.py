@@ -1,4 +1,4 @@
-__version__ = '0.1.2'
+__version__ = '0.2.0'
 
 from functools import wraps
 
@@ -12,10 +12,8 @@ class InteractionType:
 
 class InteractionResponseType:
     PONG = 1
-    ACKNOWLEDGE = 2
-    CHANNEL_MESSAGE = 3
     CHANNEL_MESSAGE_WITH_SOURCE = 4
-    ACKNOWLEDGE_WITH_SOURCE = 5
+    DEFERRED_CHANNEL_MESSAGE_WITH_SOURCE = 5
 
 class InteractionResponseFlags:
     EPHEMERAL = 1 << 6
