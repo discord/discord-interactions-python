@@ -2,7 +2,6 @@ __version__ = '0.3.0'
 
 from functools import wraps
 
-from nacl.encoding import HexEncoder
 from nacl.exceptions import BadSignatureError
 from nacl.signing import VerifyKey
 
