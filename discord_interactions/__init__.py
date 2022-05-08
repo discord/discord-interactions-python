@@ -10,6 +10,7 @@ class InteractionType:
     APPLICATION_COMMAND = 2
     MESSAGE_COMPONENT = 3
     APPLICATION_COMMAND_AUTOCOMPLETE = 4
+    MODAL_SUBMIT = 5 
 
 class InteractionResponseType:
     PONG = 1
@@ -18,6 +19,7 @@ class InteractionResponseType:
     DEFERRED_UPDATE_MESSAGE = 6
     UPDATE_MESSAGE =  7  
     APPLICATION_COMMAND_AUTOCOMPLETE_RESULT = 8 
+    MODAL = 9 
 
 class InteractionResponseFlags:
     EPHEMERAL = 1 << 6
